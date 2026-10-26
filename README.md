@@ -1,36 +1,54 @@
-# SonicGlow RGB MVP v0.1
+# SonicGlow RGB Studio v0.2 Pro
 
-A React + TypeScript browser MVP that plays a local audio file and visualizes its frequency energy in real time.
+A high-performance React + TypeScript audio-reactive lighting suite and spectrum analyzer built with the Web Audio API.
 
-## Requirements
-- Node.js LTS
-- npm
-- VS Code (recommended)
+## Features
 
-## Run
+### 🎵 Multi-Source Audio Engine
+- **In-Browser Web Audio Synthesizer**: Instant demo generation with 3 presets (*Neon Synthwave*, *Cyber Bass Drop*, *Aurora Chill*) — zero audio files required to test!
+- **Local Audio Player**: Full drag-and-drop support for `.mp3`, `.wav`, `.flac`, `.ogg`, `.m4a` files with time scrubbing, loop toggle, and variable playback speeds (0.75x–1.5x).
+- **Live Microphone Input**: Real-time room and voice audio capture via `getUserMedia` with automatic acoustic feedback isolation.
+
+### 🎨 10 Bespoke RGB Chromatic Palettes
+- **Spectrum**: Classic neon violet, cyan, and hot pink
+- **Cyberpunk**: High-contrast neon magenta, electric purple, and cyan
+- **Ocean Aurora**: Deep bioluminescent aqua, sapphire, and mint teal
+- **Sunset Mirage**: Warm rose coral, flame orange, and golden sunlight
+- **Emerald Matrix**: Toxic acid green and cyber emerald
+- **Bloodmoon**: Fierce crimson flame and volcanic violet
+- **Synthwave 80s**: Outrun retro fuchsia, sunset peach, and sky blue
+- **Prism Rainbow**: Dynamic 360° continuous chromatic hue cycling
+- **Hyper White**: Platinum diamond and frosted azure
+- **Imperial Gold**: Luxurious amber gold and royal indigo
+
+### ✨ 7 Canvas Visualizer Animation Modes
+1. **Bars (Spectrum)**: Dynamic frequency bars with falling peak hold indicators
+2. **Radial**: 360° circular sonic starburst around a pulsating sub-bass center
+3. **Wave**: Smooth multi-layered flowing neon oscillograms
+4. **Pulse**: Concentric acoustic shockwaves rippling outward on beat drops
+5. **Cosmic**: 90+ audio-reactive stardust particles with physics acceleration
+6. **Stereo**: Dual-channel symmetrical center-out equalizer
+7. **Matrix**: Digital neon rain columns that accelerate with audio energy
+
+### 🎛️ Sound Shaping & Hardware Rig Emulation
+- **3-Band Equalizer (EQ)**: Real-time Lowshelf, Peaking, and Highshelf Biquad filters (-10dB to +12dB).
+- **4-Zone Chroma Emulator**: Simulated physical LED hardware (Left Speaker Tower, Top Lightbar, Right Speaker Tower, and Desk Underglow).
+- **Room Ambilight Effect**: Immersive edge glow projection synced to the music.
+- **Fullscreen Stage View**: Press the fullscreen button or `Esc` to toggle cinema mode.
+
+## Development
+
 ```powershell
 npm install
 npm run dev
 ```
-Open the local URL printed by Vite (normally http://localhost:5173).
 
-## Production build
+## Production Build
+
 ```powershell
 npm run build
 npm run preview
 ```
 
-## Features
-- Local audio-file playback
-- Web Audio API analyser (FFT frequency bins + time-domain RMS estimate)
-- Bass, midrange, treble and energy meters
-- Animated canvas spectrum, wave and bass-pulse effects
-- Color themes, sensitivity and brightness controls
-- Responsive dark UI
-
-## Scope and limitations
-This MVP only analyzes audio played by its in-app audio player. It does not capture system-wide audio from Spotify, YouTube, VLC, or games. It does not yet control physical RGB devices. Those require a desktop audio-capture layer (for example, Tauri/Rust + Windows WASAPI loopback) and a compatible hardware integration.
-
-The audio file is processed locally in the browser; the app does not upload it.
-
-If the Google Fonts import is unavailable, the app falls back to local system fonts.
+## License
+MIT
